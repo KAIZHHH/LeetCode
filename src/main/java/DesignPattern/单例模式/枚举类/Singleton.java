@@ -1,4 +1,4 @@
-package DesignModel.单例模式.枚举类;
+package DesignPattern.单例模式.枚举类;
 
 import java.lang.reflect.Constructor;
 

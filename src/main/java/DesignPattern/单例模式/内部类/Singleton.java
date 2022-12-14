@@ -1,4 +1,4 @@
-package DesignModel.单例模式.内部类;
+package DesignPattern.单例模式.内部类;
 
 //内部类实现单例模式
 class Singleton {

@@ -1,4 +1,4 @@
-package DesignModel.单例模式.饿汉式;
+package DesignPattern.单例模式.饿汉式;
 
 /**
  * @author kai

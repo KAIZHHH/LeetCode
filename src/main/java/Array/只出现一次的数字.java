@@ -21,10 +21,11 @@ import java.util.Map;
 public class 只出现一次的数字 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 1, 2, 3, 2, 5};
-        int i = singleNumber2(arr);
+        int i = singleNumber(arr);
         System.out.println(i);
     }
 
+    //哈希表 空间O(n)
     public static int singleNumber(int[] arr) {
         Map<Integer, Integer> map = new HashMap<>(arr.length);
         for (int i : arr) {
@@ -44,6 +45,8 @@ public class 只出现一次的数字 {
 
     }
 
+    //数组 空间O(n)
+
     public static int singleNumber2(int[] nums) {
 
         int[] count = new int[10];
@@ -58,6 +61,7 @@ public class 只出现一次的数字 {
         return ' ';
     }
 
+    //异或运算 空间O(1) 时间O(n) 遍历一次不用保存
     public int singleNumber1(int[] nums) {
         int single = 0;
         for (int num : nums) {

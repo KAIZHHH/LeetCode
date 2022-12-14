@@ -1,4 +1,4 @@
-package DesignModel.单例模式.双检锁;
+package DesignPattern.单例模式.双检锁;
 
 /**
  * @author kai

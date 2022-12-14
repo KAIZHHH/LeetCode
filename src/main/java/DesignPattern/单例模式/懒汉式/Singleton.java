@@ -1,4 +1,4 @@
-package DesignModel.单例模式.懒汉式;
+package DesignPattern.单例模式.懒汉式;
 
 /**
  * @author kai

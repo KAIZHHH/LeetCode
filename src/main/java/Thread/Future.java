@@ -7,12 +7,12 @@ import java.util.concurrent.*;
 /**
  * 描述：演示 Future 的使用方法
  */
-public class 只出现一次的数字Future {
+public class Future {
 
     @Test
     public void test1() {
         ExecutorService service = Executors.newFixedThreadPool(10);
-        Future<Integer> future = service.submit(new Callable<Integer>() {
+        java.util.concurrent.Future<Integer> future = service.submit(new Callable<Integer>() {
             @Override
             public Integer call() throws Exception {
                 Thread.sleep(3000);

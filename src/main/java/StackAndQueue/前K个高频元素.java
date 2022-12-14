@@ -21,8 +21,9 @@ import java.util.*;
  */
 public class 前K个高频元素 {
     public static void main(String[] args) {
-        int[] nums = {1, 2, 2, 4, 3, 3};
-
+        int[] nums = {2, 2, 2, 1,4, 3, 3};
+        List<Integer> integers = topKFrequent(nums, 2);
+        System.out.println(integers);
     }
 
     /*
@@ -42,7 +43,8 @@ public class 前K个高频元素 {
 return a[0]-b[0] 就是对第0列的数据进行排序，a[0]可以理解成 1 ，b[0]可以理解成 3
 return b[1]-a[1] 就是对第1列的数据进行排序
  */
-    public int[] topKFrequent1(int[] nums, int k) {
+    //统计map->二维数组排序
+    public static int[] topKFrequent1(int[] nums, int k) {
 
         Map<Integer, Integer> map = new HashMap<>();
         //记录次数
@@ -83,6 +85,7 @@ return b[1]-a[1] 就是对第1列的数据进行排序
         return ans;
     }
 
+    //统计map->转集合排序
     public static int[] topKFrequent2(int[] nums, int k) {
         //记录次数
         Map<Integer, Integer> map = new HashMap<>();
@@ -106,4 +109,34 @@ return b[1]-a[1] 就是对第1列的数据进行排序
         return result;
     }
 
+    //堆排序
+    public static List<Integer> topKFrequent(int[] nums, int k) {
+        // 使用字典，统计每个元素出现的次数，元素为键，元素出现的次数为值
+        Map<Integer, Integer> map = new HashMap();
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+        // 遍历map，用最小堆保存频率最大的k个元素
+        PriorityQueue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer a, Integer b) {
+                return map.get(a) - map.get(b);//弹出最小的
+            }
+        });
+        //pq会按照compare定义的顺序弹出指定的元素 不会按照队列里的顺序
+        for (Integer key : map.keySet()) {
+            if (pq.size() < k) {
+                pq.add(key);
+            } else if (map.get(key) > map.get(pq.peek())) {
+                pq.remove();
+                pq.add(key);
+            }
+        }
+        // 取出最小堆中的元素
+        List<Integer> res = new ArrayList<>();
+        while (!pq.isEmpty()) {
+            res.add(pq.remove());
+        }
+        return res;
+    }
 }

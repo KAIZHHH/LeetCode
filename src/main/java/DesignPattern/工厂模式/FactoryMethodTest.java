@@ -1,4 +1,4 @@
-package DesignModel.工厂模式;
+package DesignPattern.工厂模式;
 
 /**
  * @author kai

@@ -1,6 +1,6 @@
-package DesignModel.单例模式.破坏单例方式.序列化;
+package DesignPattern.单例模式.破坏单例方式.序列化;
 
-import DesignModel.单例模式.双检锁.Singleton;
+import DesignPattern.单例模式.双检锁.Singleton;
 
 import java.io.*;
 

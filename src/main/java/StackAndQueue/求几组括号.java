@@ -1,10 +1,16 @@
+package StackAndQueue;
+
 import java.util.Stack;
 
 /**
  * @author kai
  * @date 2022/11/24 下午9:53
  */
-public class 括号 {
+
+/*
+几组括号
+ */
+public class 求几组括号 {
     public static void main(String[] args) {
         int test = test("g(a)((m)())e");
         System.out.println(test);

@@ -20,7 +20,7 @@ public class 最长公共前缀 {
         String s = longestCommonPrefix(strs);
         System.out.println(s);
     }
-
+    //时间O(n^2) 空间O(1)
     public static String longestCommonPrefix(String[] strs) {
         String common = strs[0];
         for (int i = 1; i < strs.length; i++) {

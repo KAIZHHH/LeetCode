@@ -23,8 +23,12 @@ public class 回文子串_双指针_个数 {
         System.out.println(abc);
     }
 
+
     //中心扩散
-    public static int countSubstrings(String s) {
+    /*
+    时间复杂度：O(n^2)
+    空间复杂度：O(1)
+     */public static int countSubstrings(String s) {
         int res = 0;
         for (int i = 0; i < s.length(); i++) {
             //回文子串为奇数：1、3、5

@@ -21,16 +21,19 @@ import java.util.Set;
 1、lr指针 r往后扫描不存在set 就添加到set
 2、遇到存在的就删除l指针元素 取最大长度
  */
-public class 无重复字符的最长子串_连续_双指针_个数 {
+public class 最长无重复连续字符个数_无重复字符的最长子串_连续_双指针_个数 {
     public static void main(String[] args) {
         String s = "abceabcrvb";
         int i = lengthofLongestSubstring(s);
         System.out.println(i);
     }
 
+    //时间 空间 O(n)
     public static int lengthofLongestSubstring(String s) {
         int n = s.length();
-        if (n == 0) return 0;
+        if (n == 0) {
+            return 0;
+        }
         Set<Character> set = new HashSet();
         int l = 0;
         int r = 0;

@@ -34,6 +34,10 @@ public class 不同的子序列 {
         System.out.println(i);
     }
 
+    /*
+    时间复杂度：O(mn)，其中 mm 和 nn 分别是字符串 ss 和 tt 的长度。二维数组dp 有 m+1 行和 n+1 列，需要对 dp 中的每个元素进行计算。
+    空间复杂度：O(mn)，其中 mm 和 nn 分别是字符串 ss 和 tt 的长度。创建了m+1 行n+1 列的二维数组dp。
+     */
     public static int numDistinct(String s, String t) {
         int m = s.length();
         int n = t.length();

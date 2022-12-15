@@ -27,6 +27,10 @@ public class 判断子序列_不连续_双指针 {
     }
 
     //双指针
+    /*
+    时间复杂度：O(n+m)，其中 nn 为 ss 的长度，mm 为 tt 的长度。每次无论是匹配成功还是失败，都有至少一个指针发生右移，两指针能够位移的总距离为 n+mn+m。
+    空间复杂度：O(1)。
+     */
     public static boolean isSubsequence1(String s, String t) {
         int n = s.length(), m = t.length();
         int i = 0, j = 0;

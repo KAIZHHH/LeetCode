@@ -13,7 +13,7 @@ import CodeTop.ListNode;
 输入：
 cur even
  |  |
-{1, 2,3,4,5,6}
+{1, 2,3,4,5}
 
    cur
 返回值：
@@ -33,11 +33,12 @@ public class 链表的奇偶重排 {
 
     public static ListNode oddEvenList(ListNode head) {
         //如果链表为空，不用重排
-        if (head == null)  return head;
-        //even开头指向第二个节点，可能为空
-        ListNode even = head.next;
+        if (head == null) return head;
         //odd开头指向第一个节点
         ListNode odd = head;
+        //even开头指向第二个节点，可能为空
+        ListNode even = head.next;
+
         //指向even开头
         ListNode evenhead = even;
         while (even != null && even.next != null) {
